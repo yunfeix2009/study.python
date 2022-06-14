@@ -1,1 +1,1 @@
-# study.python
+# study.python ( old c disk )
