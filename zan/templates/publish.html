@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文章发表中心</title>
+</head>
+<body>
+    <div style="background-color:#FFA500;">
+
+        <h1><strong><span style="color:blue">欢迎来到文章发表中心</span></strong></h1>
+        <h3>请在下面输出您要发表的文章和标题</h3>
+        <form action="/publish_content" method="post">
+            你的信息:
+            <br/>
+            <input type="text" name="creater"/>
+            <br/>
+            标题:
+            <br/>
+            <input type="text" name="title"/>
+            <br/>
+            文章内容：
+            <br/>
+            <textarea rows="5" cols="20" name="arc_contents"></textarea>
+            <button>发布文章</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>show</title>
+</head>
+<body>
+    <form method="post">
+        {{ form.csrf_token() }}
+
+        {{ form.name.label }}
+        <p>{{ form.name }}</p>
+        <hr>
+        {{ form.gender.label }}
+        <p>{{ form.gender }}</p>
+        <hr>
+        {{ form.alias.label }}
+        <p>{{ form.alias }}</p>
+        <hr>
+        {{ form.pwd.label }}
+        <p>{{ form.pwd }}</p>
+        <hr>
+        {{ form.age.label }}
+        <p>{{ form.age }}</p>
+        <hr>
+        {{ form.height.label }}
+        <p>{{ form.height }}</p>
+        <hr>
+        {{ form.weight.label }}
+        <p>{{ form.weight }}</p>
+        <hr>
+        {{ form.nationality.label }}
+        <p>{{ form.nationality }}</p>
+        <hr>
+        {{ form.education.label }}
+        <p>{{ form.education }}</p>
+        <hr>
+        {{ form.math_q.label }}
+        <p>{{ form.math_q }}</p>
+        <hr>
+        {{ form.date_field.label }}
+        <p>{{ form.date_field }}</p>
+        <hr>
+        {{ form.is_useful.label }}
+        <p>{{ form.is_useful }}</p>
+        <hr>
+        {{ form.resp.label }}
+        <p>{{ form.resp }}</p>
+        <hr>
+
+        <p>{{ form.submit() }}</p>
+    </form>
+</body>
+</html>

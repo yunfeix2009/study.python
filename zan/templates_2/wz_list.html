@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>wz_list</title>
+    <style>
+         .css2 {
+            overflow: hidden; /*自动隐藏文字*/
+            text-overflow: ellipsis;/*文字隐藏后添加省略号*/
+            white-space: nowrap;/*强制不换行*/
+            width: 200px;/*不允许出现半汉字截断*/
+            color:grey;border:1px #ff8000 dashed;text-align:center;
+            margin:20px auto;/* margin-left 与 margin-right 设置为 auto */
+         }
+    </style>
+</head>
+<body>
+  <form action="/search_all">
+    <div style="clear:both;text-align:center;">
+        搜索文章（文章名）：
+        <input type="text">
+        <button>查询</button>
+        <br>
+        {% for i in value %}
+            文章名：<a href="/wz?id={{ i[4] }}">{{ i[0] }}</a><p>      </p>点赞：{{ i[3] }}
+            <br>
+            作者：<a href="/author">{{ i[1] }}</a>
+            <br>
+            <div class="css2">{{ i[2] }}</div>
+            <hr>
+        {% endfor %}
+    </div>
+  </form>
+</body>
+</html>

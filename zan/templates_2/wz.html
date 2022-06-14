@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>wz</title>
+    <style>
+    .css1{
+        border:1px #ff8000 dashed;
+        margin-bottom:20px;
+        width: 20em;/*不允许出现半汉字截断*/
+        margin:auto
+        }
+    .left{
+        margin-left:80px
+        }
+    </style>
+</head>
+<body>
+<div style="clear:both;text-align:center;">
+    <b>{{ title }}</b>
+    <br>
+    <div class="left"> <a href="/author">{{ author }}</a></div>
+    <br>
+    <div class="css1"> <p>{{ content }}</p></div>
+    <br>
+    支持一下:
+    {% if usr in zaner %}
+        <a href="/qu_xiao?wz_id={{ id }}">取消</a>
+        <div style="color:red">{{ likes }}</div>
+    {% else %}
+        <a href="/dian_zan?wz_id={{ id }}">点赞</a>
+        <div style="color:grey">{{ likes }}</div>
+    {% endif %}
+</div>
+</body>
+</html>

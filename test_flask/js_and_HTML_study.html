@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>js_study</title>
+</head>
+<body>
+
+<h1>first JavaScript</h1>
+<p id="demo" >
+    test is good.
+</p >
+<button type="button" onclick="myFunction()">点击这里</button>
+<hr>
+
+
+<p id="demo1">
+    可以显示时间
+</p >
+<button type="button" onclick="showTime()">点击显示时间
+</button>
+<hr>
+
+<button type="button" onclick="show_msg()">点我</button>
+<hr>
+
+<button type="button" onclick="add()">add
+</button>
+<br>
+<button type="button" onclick="munis()">munis
+</button>
+<p id="demo3">点add可以计数：0<br>（点munis可以减一个）</p >
+
+<hr>
+<p>如果时间早于 12:00，会获得问候 "Good morning"。</p >
+<button onclick="hello()">点击这里</button>
+<p id="demo4"></p >
+
+<hr>
+<p>循环执行5次。</p >
+<button onclick="fors()">点我</button>
+<p id="demo5"></p >
+
+<hr>
+<p>只要 i 小于 5 就一直循环代码块。</p >
+<button onclick="whiles()">点击这里</button>
+<p id="demo6"></p >
+
+<script>
+
+    var firstname;
+    firstname="jerry";
+    document.write(firstname);
+    document.write("<br>");
+    firstname="tom";
+    document.write(firstname);
+
+    var count=0
+
+    function add() {
+        count+=1
+        document.getElementById("demo3").innerHTML="可以计数："+count+"（点munis可以减一个）"
+    }
+
+    function munis(){
+        count--
+        document.getElementById("demo3").innerHTML="可以计数："+count+"（点munis可以减一个）"
+    }
+
+    function showTime() {
+        document.getElementById('demo1').innerHTML = Date()
+    }
+function myFunction()
+{
+    console.log("call myfunction")
+   x=document.getElementById("demo") // 找到元素
+   x.style.color="red";          // 改变样式==>style="color: #0000FF"
+}
+
+function show_msg() {
+    alert("good job")
+}
+
+function hello() {
+    var x="";
+   var time=new Date().getHours();
+   if (time<12){
+      x="Good morning";
+    }else{
+       x="Good afternoon"
+    }
+   document.getElementById("demo4").innerHTML=x;
+}
+
+function fors(){
+   var x="",i
+   for (i=0;i<5;i++){
+      x=x + "这个数字是" + i + "<br>"
+   }
+   document.getElementById("demo5").innerHTML=x
+}
+
+function whiles(){
+   var x="",i=0
+   while (i<5){
+      x=x + "该数字为 " + i + "<br>"
+      i++
+   }
+   document.getElementById("demo6").innerHTML=x
+}
+</script>
+</body>
+</html>

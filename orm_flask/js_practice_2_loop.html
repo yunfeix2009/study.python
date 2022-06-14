@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>loop</title>
+</head>
+<body>
+<script>
+
+cars=["BMW","Volvo","Saab","Ford"];
+
+for (var i=0,len=cars.length; i<len; i++)
+{
+    console.log(cars[i] + "<br>");
+}
+
+
+var i=2,len=cars.length;
+for (; i<len; i++)
+{
+    console.log(cars[i] + "<br>");
+}
+
+var i=0,len=cars.length;
+for (; i<len; )
+{
+    console.log(cars[i] + "<br>");
+    i++;
+}
+
+
+var person={fname:"Bill",lname:"Gates",age:56};
+var txt = '';
+for (x in person)  // x 为属性名
+{
+    txt=txt + person[x];
+}
+console.log(txt)
+
+
+var x;
+var txt="";
+var person={fname:"Bill",lname:"Gates",age:56};
+while (i<5)
+{
+    x=x + "The number is " + i + "<br>";
+    i++;
+}
+console.log(x)
+
+
+do
+{
+    x=x + "The number is " + i + "<br>";
+    i++;
+}
+while (i<5);
+console.log(x)
+
+
+cars=["BMW","Volvo","Saab","Ford"];
+var i=0;
+for (;cars[i];)
+{
+    console.log(cars[i] + "<br>");
+    i++;
+}
+
+
+cars=["BMW","Volvo","Saab","Ford"];
+var i=0;
+while (cars[i])
+{
+    console.log(cars[i] + "<br>");
+    i++;
+}
+</script>
+</body>
+</html>

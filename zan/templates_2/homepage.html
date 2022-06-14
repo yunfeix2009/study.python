@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>homepage</title>
+</head>
+<body>
+  <a href="/publish">发表</a>
+    我的文章
+  <table border="1">
+    <thead>
+        <th>Title</th>
+        <th>Content</th>
+        <th>鼓励下自己</th>
+    </thead>
+    <tbody>
+            {% for i in value %}
+                <tr>
+                    <td>{{ i[0] }}</td>
+                    <td>{{ i[3] }}</td>
+                    {% if i[2] %}
+                        <td><a href="/qu_xiao?wz_id={{ i[4] }}">取消</a></td>
+                    {% else %}
+                        <td><a href="/dian_zan?wz_id={{ i[4] }}">点赞</a></td>
+                    {% endif %}
+                </tr>
+            {% endfor %}
+    </tbody>
+  </table>
+<a href="/wz_list">其他人的</a>
+</body>
+</html>

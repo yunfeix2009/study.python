@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>if</title>
+</head>
+<body>
+<script>
+  var x = '';
+  var time = new Date().getHours();
+  if (time<20){
+    console.log("good day")
+  }
+
+
+  var x = '';
+  var time = new Date().getHours();
+  if (time<20){
+    console.log("good day")
+    }
+    else{
+    console.log("good evening")
+  }
+
+  var x = '';
+  var time = new Date().getHours();
+  console.log(time);
+  if (time<10){
+    console.log("good morning")
+    }
+    else if(time>10 && time<20){
+    console.log("good day")
+    }
+    else{
+    console.log("good evening")
+  }
+
+  var x;
+  var d = new Date().getDay();
+  console.log(d);
+  switch (d){
+    case 0:x="休息";
+    break;
+    case 1:x="上学";
+    break;
+    case 2:x="上学";
+    break;
+    case 3:x="上学";
+    break;
+    case 4:x="上学";
+    break;
+    case 5:x="上学";
+    break;
+    case 6:x="休息";
+    break;
+    default:x="期待周末";
+  }
+  console.log(x)
+
+
+</script>
+</body>
+</html>

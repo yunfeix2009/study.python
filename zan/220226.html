@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+<style>
+    .css1{
+        color:#6699ff;border:1px #ff8000 dashed;
+        margin-bottom:20px;
+        width: 20em;/*不允许出现半汉字截断*/
+        }
+    .css2 {
+        overflow: hidden; /*自动隐藏文字*/
+        text-overflow: ellipsis;/*文字隐藏后添加省略号*/
+        white-space: nowrap;/*强制不换行*/
+        width: 20em;/*不允许出现半汉字截断*/
+        color:#6699ff;border:1px #ff8000 dashed;
+        }
+    .test {
+        border:1px solid red;/*为了显示居中效果明显为 div 设置了边框*/
+        width:200px;/*定宽*/
+        margin:20px auto;/* margin-left 与 margin-right 设置为 auto */
+        }
+</style>
+
+</head>
+<body>
+  <div class="css1">Web前端开发 – 专注于网站前端设计与Web用户体验</div>
+  <div class="css2">Web前端开发 – 专注于网站前端设计与Web用户体验</div>
+  <div class="test">Web前端开发 – 专注于网站前端设计与Web用户体验</div>
+</body>
+</html>

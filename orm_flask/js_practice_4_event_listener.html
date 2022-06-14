@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>listener_event</title>
+</head>
+<body>
+<input type="text" onclick="fuc_txt()" ondblclick="fuc()" id="my_text"/>
+<button id="main_button"  ondblclick="alert(44)" onclick="fuc()">点我</button>
+<script>
+    btn = document.getElementById("main_button");
+    btn.onclick = fuc2;
+
+    txt = document.getElementById("my_text");
+
+    function fuc_txt(){
+        if (txt.type == "button"){
+            txt.type = "txt";
+            txt.value = "I am so unsmart";
+        }
+        else {
+            txt.type = "button";
+            txt.value = "I am so smart";
+        }
+        btn.click();
+    }
+
+
+    function fuc(){
+        console.log('this button was be click once.');
+        alert('I am so smart');
+    }
+
+
+    function fuc2(){
+        console.log('2');
+        alert('I am so 2');
+    }
+</script>
+</body>
+</html>

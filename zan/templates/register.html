@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>register</title>
+</head>
+<body>
+    <form method="post" action="/save_usr">
+        {{ form.csrf_token() }}
+        {{ form.us.label }}6
+        <p>{{ form.us }}</p>
+        {{ form.ps.label }}
+        <p>{{ form.ps }}</p>
+        {{ form.ps2.label }}
+        <p>{{ form.ps2 }}</p>
+        <p>{{ form.submit() }}</p>
+        {% for x in get_flashed_messages() %}
+            {{ x }}
+        {% endfor %}
+    </form>
+</body>
+</html>
+

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>plus</title>
+</head>
+<body>
+{% extends "base.html" %}
+{% block content %}
+    <form method="post" action="{{ url_for('index') }}">
+{#       设置csrf_token#}
+          {{ form.csrf_token() }}
+
+          {{ form.us.label }}
+          <p>{{ form.us }}</p>
+          {% for e in form.us.errors %}
+             <span style="color:red">*{{ e }}</span>
+          {% endfor %}
+          <br>
+
+          {{ form.ps.label }}
+          <p>{{ form.ps }}</p>
+          {{ for e in form.ps.errors %}
+              <span style="color:red">*{{ e }}</span>
+          {{% endfor %}
+
+          {{ form.ps2.label }}
+        <p>{{ forms.ps2 }}</p>
+        {% for e in form.ps2.errors %}
+            <span style="color:red">*{{ e }}</span>
+        <br>
+
+        <p>{{ form.submit() }}</p>
+
+
+</form>
+{% endblock %}
+</body>
+</html>
