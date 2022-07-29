@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <title>{%block tile%}Say Hello!{%endblock%}</title>
+        {{bootstrap.load_css()}}
+
+</head>
+<body>
+<main class="container">
+    <header>
+        <h1 class="text-center display-4">
+            <small style="font-size:24x" class="text-muted">Hello world</small>
+        </h1>
+    </header>
+
+    {%block content%}{%endblock%}
+    <footer class="text-center">
+        {%block footer%}
+        <p><a id="bottom" href="#" title="Go Top">&uarr;</a></p>
+        {%endblock%}
+    </footer>
+</main>
+</body>
+{{bootstrap.load_js()}}
+
+</html>

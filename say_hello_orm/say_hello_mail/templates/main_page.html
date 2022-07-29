@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>main_page</title>
+</head>
+<body>
+
+    <h1 class="text-center display-4">
+        <a href="{ { url_for('sayhello.index') }}" class="text-success"><strong>Say Hello</strong></a>
+        <small class="text-muted sub-title">to the world</small>
+    </h1>
+    <form method="post" action="/send">
+        {{ form.csrf_token() }}
+        {{ form.subject.label }}
+        <p>{{ form.subject }}</p>
+        {{ form.address.label }}
+        <p>{{ form.address }}</p>
+        {{ form.content.label }}
+        <p>{{ form.content }}</p>
+        {{ form.name.label }}
+        <p>{{ form.name }}</p>
+        {{ form.email_address.label }}
+        <p>{{ form.email_address }}</p>
+        <p>{{ form.submit() }}</p>
+    </form>
+</body>
+</html>
